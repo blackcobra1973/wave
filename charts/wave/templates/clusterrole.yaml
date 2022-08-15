@@ -17,6 +17,7 @@ rules:
       - update
       - patch
       - watch
+      - delete
   - apiGroups:
       - ""
     resources:
@@ -29,8 +30,11 @@ rules:
       - apps
     resources:
       - deployments
+      - deployments/finalizers
       - daemonsets
+      - daemonsets/finalizers
       - statefulsets
+      - statefulsets/finalizers
     verbs:
       - list
       - get
